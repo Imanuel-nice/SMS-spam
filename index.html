@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpamFree — SMS Spam & Phishing Detector</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Spam<span>Free</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#detector">Detector</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="btn btn-outline nav-cta">Get Started</button>
+    </div>
+  </header>
+
+  <!-- Hero / Detector Section -->
+  <section id="detector" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">Machine Learning Powered</span>
+        <h1>Protect Yourself From <br><span class="highlight">SMS Spam & Scams</span></h1>
+        <p class="subtitle">
+          Instantly analyze text messages for phishing attempts, fraudulent links, and commercial spam using our intelligent detection system.
+        </p>
+
+        <!-- Detection Card Input -->
+        <div class="detector-card">
+          <label for="message-input" class="input-label">Paste SMS or text message below:</label>
+          <div class="textarea-wrapper">
+            <textarea id="message-input" rows="5" placeholder="e.g., Claim your $1000 gift card now! Click http://bit.ly/claim-now to redeem..."></textarea>
+          </div>
+          
+          <div class="sample-pills">
+            <span class="pill-label">Try sample:</span>
+            <button class="pill-btn" data-sample="spam">Spam Sample</button>
+            <button class="pill-btn" data-sample="ham">Safe Sample</button>
+          </div>
+
+          <div class="action-row">
+            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+            <button id="analyze-btn" class="btn btn-primary">Analyze Message</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detection Result Panel -->
+      <div id="results-panel" class="results-panel card-hidden">
+        <div class="result-header">
+          <h3>Analysis Result</h3>
+          <span id="verdict-badge" class="verdict-badge">Pending</span>
+        </div>
+
+        <div class="score-container">
+          <div class="score-label">Spam Probability</div>
+          <div class="progress-bar-bg">
+            <div id="score-bar" class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+          <div id="score-text" class="score-value">0%</div>
+        </div>
+
+        <div id="signals-container" class="signals-container">
+          <h4>Detected Signals</h4>
+          <ul id="signals-list" class="signals-list">
+            <li>No analysis performed yet.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How SpamFree Works</h2>
+        <p>Three powerful steps to keep your mobile communications safe</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>1. Text Analysis</h3>
+          <p>Scans incoming text structures, extracting key features, URL shorteners, and urgent phrasing patterns.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>2. ML Classification</h3>
+          <p>Runs the extracted features through trained Naïve Bayes and Support Vector Machine (SVM) models.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>3. Instant Verdict</h3>
+          <p>Delivers clear safety score and risk recommendations before you interact with links or send money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 SpamFree. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
